@@ -22,7 +22,18 @@ import styles from './index.module.scss';
 
 const IndexPage = () => (
   <div className={styles.main}>
-    <header>Wayne Su/Resume</header>
+    <header>
+      
+    </header>
+    <div className={styles.hero}>
+      Hi, My name is Wayne Su
+    </div>
+    <div className={styles.projects}>
+      projects
+    </div>
+    <footer>
+      contact me
+    </footer>
   </div>
 );
 
