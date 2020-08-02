@@ -1,6 +1,9 @@
 import React from 'react';
 import { Link } from 'gatsby';
+import Header from '../components/header';
+import '../components/reset.css';
 import styles from './index.module.scss';
+import Layout from '../components/layout';
 
 // import Layout from '../components/layout';
 // import Image from '../components/image';
@@ -21,10 +24,7 @@ import styles from './index.module.scss';
 // )
 
 const IndexPage = () => (
-  <div className={styles.main}>
-    <header>
-      
-    </header>
+  <Layout>
     <div className={styles.hero}>
       Hi, My name is Wayne Su
     </div>
@@ -34,7 +34,7 @@ const IndexPage = () => (
     <footer>
       contact me
     </footer>
-  </div>
+  </Layout>
 );
 
 export default IndexPage;
