@@ -1,9 +1,11 @@
 ---
-title: "NDGroup"
-description: "Academic presentation session scheduling with file hosting"
-date: "2017-08-10"
-featuredImage: ../images/project-ndg.jpg
+title: "SFBMS 2016"
+description: "Information and registration for an international academic conference"
+date: "2016-10-1"
+featuredImage: ../images/project-sfbms2016.jpg
 tags:
+  - name: "Visual"
+    type: "Design"
   - name: "PHP"
     type: "code"
   - name: "MySQL"

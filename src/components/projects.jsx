@@ -42,7 +42,6 @@ const Projects = () => {
     }
   }
 `);
-  console.log(projects);
   return (
     <div className={styles.projects}>
       <div className={styles.contentWrap}>

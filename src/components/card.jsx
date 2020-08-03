@@ -10,7 +10,6 @@ const Card = ({
   },
 }) => (
   <>
-    {console.log(title)}
     <Img fluid={featuredImage.childImageSharp.fluid} />
     <div className={styles.info}>
       <div className={styles.cardTitle}>
