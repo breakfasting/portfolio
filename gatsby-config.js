@@ -6,6 +6,13 @@ module.exports = {
   },
   plugins: [
     `gatsby-plugin-sass`,
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/src/pages`,
+      },
+    },
+    `gatsby-transformer-remark`,
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-plugin-prefetch-google-fonts`,

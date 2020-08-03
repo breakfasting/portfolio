@@ -1,0 +1,39 @@
+@import './colors.scss';
+
+.info {
+  padding: 32px;
+}
+
+.cardTitle {
+  font-size: 1.4em;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.cardDesc {
+  margin-bottom: 8px;
+  line-height: 1.4em;
+  color: $dark-grey;
+}
+
+.tags {
+  margin-top: 16px;
+  font-size: 0.8em;
+
+  span {
+    color: white;
+    display: inline-block;
+    padding: 6px 8px;
+    background-color: $green;
+    margin-right: 8px;
+    border-radius: 4px;
+  }
+
+  .blue {
+    background-color: $blue;
+  }
+
+  .orange {
+    background-color: $orange;
+  }
+}
