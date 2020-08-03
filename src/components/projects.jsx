@@ -1,6 +1,5 @@
 import React from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
-import ntuac from '../images/project-ntuac.jpg';
 import styles from './projects.module.scss';
 import Card from './card';
 
@@ -37,6 +36,7 @@ const Projects = () => {
               }
             }
           }
+          id
         }
       }
     }
@@ -45,11 +45,22 @@ const Projects = () => {
   return (
     <div className={styles.projects}>
       <div className={styles.contentWrap}>
-        {projects.map((project) => (
-          <div className={styles.card}>
-            <Card project={project.node} />
+        <div className={styles.topBar}>
+          <h1 className={styles.heading}>Projects</h1>
+          <div className={styles.nav}>
+            <span className={styles.active}>Featured</span>
+            <span>All</span>
+            <span>Work</span>
+            <span>Personal</span>
           </div>
-        ))}
+        </div>
+        <ul className={styles.list}>
+          {projects.map((project) => (
+            <li key={project.node.id} className={styles.card}>
+              <Card project={project.node} />
+            </li>
+          ))}
+        </ul>
       </div>
     </div>
   );

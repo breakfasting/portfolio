@@ -9,7 +9,7 @@ const Hero = () => (
       </div>
       <div className={styles.heroText}>
         <h1>
-          And I&apos;m passionate about
+          A software engineer all about
           {' '}
           <u className={styles.code}>coding</u>
           {', '}

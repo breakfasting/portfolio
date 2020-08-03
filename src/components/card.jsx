@@ -21,7 +21,6 @@ const Card = ({
         </div>
       </div>
       <div className={styles.tags}>
-        {console.log(tags)}
         {tags.map((tag) => (
           <span className={styles[tag.type]}>{tag.name}</span>
         ))}
