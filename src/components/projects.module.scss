@@ -1,3 +1,5 @@
+@import './colors.scss';
+
 .projects {
   display: flex;
   justify-content: center;
@@ -7,10 +9,84 @@
   width: 960px;
   padding: 13px 13px;
   box-sizing: border-box;
-  background-color: yellow;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
-.test {
+.card {
+  background-color: white;
   width: 100%;
-  background-color: red;
+  border: 1px solid $light-grey;
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: $grey 0 2px 2px;
+  margin-right: 0em;
+  margin-bottom: 1em;
+
+  img {
+    width: 100%;
+  }
+
+  .info {
+    padding: 32px;
+  }
+
+  .cardTitle {
+    font-size: 1.4em;
+    font-weight: bold;
+    margin-bottom: 8px;
+  }
+
+  .cardDesc {
+    margin-bottom: 8px;
+    line-height: 1.4em;
+    color: $dark-grey;
+  }
+
+  .tags {
+    margin-top: 16px;
+    font-size: 0.8em;
+
+    span {
+      color: white;
+      display: inline-block;
+      padding: 6px 8px;
+      background-color: $green;
+      margin-right: 8px;
+      border-radius: 4px;
+    }
+
+    .blue {
+      background-color: $blue;
+    }
+
+    .orange {
+      background-color: $orange;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .card {
+    width: calc(50% - 2em);
+  }
+
+  .card:not(:nth-child(2n)) {
+    margin-right: 1em;
+  }
+}
+
+@media (min-width: 1200px) { 
+  .contentWrap {
+    width: 1200px;
+  }
+
+  .card {
+    width: calc(33% - 1em);
+  }
+
+  .card:not(:nth-child(3n)) {
+    margin-right: 1em;
+  }
 }

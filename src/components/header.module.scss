@@ -15,3 +15,9 @@
   padding: 13px 13px;
   box-sizing: border-box;
 }
+
+@media (min-width: 1200px) { 
+  .contentWrap {
+    width: 1200px;
+  }
+}
