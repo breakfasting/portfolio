@@ -12,17 +12,19 @@ const Card = ({
   <>
     <Img fluid={featuredImage.childImageSharp.fluid} />
     <div className={styles.info}>
-      <div className={styles.cardTitle}>
-        <h1>{title}</h1>
-      </div>
-      <div className={styles.cardDesc}>
-        {description}
+      <div>
+        <div className={styles.cardTitle}>
+          <h1>{title}</h1>
+        </div>
+        <div className={styles.cardDesc}>
+          {description}
+        </div>
       </div>
       <div className={styles.tags}>
-        <span className={styles.orange}>UI/UX</span>
-        <span>JavaScript</span>
-        <span>HTML</span>
-        <span>CSS</span>
+        {console.log(tags)}
+        {tags.map((tag) => (
+          <span className={styles[tag.type]}>{tag.name}</span>
+        ))}
       </div>
     </div>
   </>

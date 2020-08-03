@@ -2,6 +2,10 @@
 
 .info {
   padding: 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 1;
 }
 
 .cardTitle {
@@ -17,23 +21,27 @@
 }
 
 .tags {
-  margin-top: 16px;
+  margin: 16px 0px -4px -4px;
   font-size: 0.8em;
 
   span {
     color: white;
     display: inline-block;
     padding: 6px 8px;
-    background-color: $green;
-    margin-right: 8px;
+    
+    margin: 2px 4px;
     border-radius: 4px;
   }
 
-  .blue {
+  .code {
+    background-color: $green;
+  }
+
+  .science {
     background-color: $blue;
   }
 
-  .orange {
+  .design {
     background-color: $orange;
   }
 }

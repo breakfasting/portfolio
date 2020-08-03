@@ -5,7 +5,7 @@ date: "2016-10-1"
 featuredImage: ../images/project-sfbms2016.jpg
 tags:
   - name: "Visual"
-    type: "Design"
+    type: "design"
   - name: "PHP"
     type: "code"
   - name: "MySQL"
