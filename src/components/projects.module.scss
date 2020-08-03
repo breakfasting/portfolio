@@ -1,17 +1,16 @@
-.header {
+.projects {
   display: flex;
   justify-content: center;
 }
 
-.logo {
-  margin-bottom: 0;
-}
-
 .contentWrap {
   width: 960px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   padding: 13px 13px;
   box-sizing: border-box;
+  background-color: yellow;
+}
+
+.test {
+  width: 100%;
+  background-color: red;
 }
