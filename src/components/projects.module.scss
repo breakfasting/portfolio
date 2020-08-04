@@ -11,11 +11,14 @@
   box-sizing: border-box;
 }
 
-.list {
+
+
+.list > div {
   display: flex;
   justify-content: flex-start;
   flex-wrap: wrap;
 }
+
 
 .card {
   background-color: white;

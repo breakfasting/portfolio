@@ -1,5 +1,6 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
+import FlipMove from 'react-flip-move';
 import { FiFilter } from 'react-icons/fi';
 import ReactTags from 'react-tag-autocomplete';
 import { useGroupTags } from '../hooks/use-group-tags';
@@ -7,23 +8,11 @@ import styles from './projects.module.scss';
 import './react-tags.scss';
 import Card from './card';
 
-// const mockProjects = [
-//   {
-//     title: 'Activity Calendar',
-//     desc: 'Managing upcoming events for NTU Global Lounge',
-//     img: ntuac,
-//     tagsCode: [],
-//     tagsDesign: [],
-//     tagsScience: [],
-//   },
-// ];
-
 const Projects = () => {
   const { group } = useGroupTags();
   const tagsWithId = group.map((tag, index) => ({ ...tag, id: index }));
 
   const [tags, setTags] = useState([]);
-
   const [suggestions, setSuggestions] = useState(tagsWithId);
   const reactTags = useRef();
 
@@ -38,33 +27,48 @@ const Projects = () => {
     setTags(newTags);
   };
 
+  const findTagAndSet = (input) => {
+    const newTags = tagsWithId.filter((tag) => tag.name === input);
+    setTags(newTags);
+  };
+
+  useEffect(() => {
+    findTagAndSet('Featured');
+  }, []);
+
   const { allMarkdownRemark: { edges: projects } } = useStaticQuery(graphql`
-  query MyQuery {
-    allMarkdownRemark {
-      edges {
-        node {
-          frontmatter {
-            date
-            description
-            title
-            tags {
-              name
-              type
-            }
-            featuredImage {
-              childImageSharp {
-                fluid {
-                  ...GatsbyImageSharpFluid
+    query MyQuery {
+      allMarkdownRemark {
+        edges {
+          node {
+            frontmatter {
+              date
+              description
+              title
+              tags {
+                name
+                type
+              }
+              featuredImage {
+                childImageSharp {
+                  fluid {
+                    ...GatsbyImageSharpFluid
+                  }
                 }
               }
             }
+            id
           }
-          id
         }
       }
     }
-  }
-`);
+  `);
+
+  const filteredProjects = projects.filter((project) => (
+    tags.every((tag) => (
+      project.node.frontmatter.tags.some((projTag) => projTag.name === tag.name)))
+  ));
+
   return (
     <div className={styles.projects}>
       <div className={styles.contentWrap}>
@@ -92,11 +96,16 @@ const Projects = () => {
           </div>
         </div>
         <ul className={styles.list}>
-          {projects.map((project) => (
-            <li key={project.node.id} className={styles.card}>
-              <Card project={project.node} />
-            </li>
-          ))}
+          <FlipMove
+            enterAnimation="fade"
+            leaveAnimation="fade"
+          >
+            {filteredProjects.map((project) => (
+              <li key={project.node.id} className={styles.card}>
+                <Card project={project.node} />
+              </li>
+            ))}
+          </FlipMove>
         </ul>
       </div>
     </div>

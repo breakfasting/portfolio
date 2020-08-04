@@ -6,7 +6,7 @@ const Card = ({
   project: {
     frontmatter: {
       featuredImage, title, description, tags, date,
-    }
+    },
   },
 }) => (
   <>
@@ -22,7 +22,7 @@ const Card = ({
       </div>
       <div className={styles.tags}>
         {tags.map((tag) => (
-          <span className={styles[tag.type]}>{tag.name}</span>
+          <span key={`${title}-${tag.name}`} className={styles[tag.type]}>{tag.name}</span>
         ))}
       </div>
     </div>
