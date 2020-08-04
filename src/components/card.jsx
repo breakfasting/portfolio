@@ -3,6 +3,7 @@ import Img from 'gatsby-image';
 import styles from './card.module.scss';
 
 const Card = ({
+  findTagAndAdd,
   project: {
     frontmatter: {
       featuredImage, title, description, tags, date,
@@ -22,7 +23,9 @@ const Card = ({
       </div>
       <div className={styles.tags}>
         {tags.map((tag) => (
-          <span key={`${title}-${tag.name}`} className={styles[tag.type]}>{tag.name}</span>
+          <span key={`${title}-${tag.name}`} className={styles[tag.type]} onClick={() => findTagAndAdd(tag.name)}>
+            {tag.name}
+          </span>
         ))}
       </div>
     </div>

@@ -12,9 +12,9 @@ const Projects = () => {
   const { group } = useGroupTags();
   const tagsWithId = group.map((tag, index) => ({ ...tag, id: index }));
 
-  const [tags, setTags] = useState([]);
+  const [tags, setTags] = useState([{ name: 'Featured', id: 999 }]);
   const [suggestions, setSuggestions] = useState(tagsWithId);
-  const reactTags = useRef();
+  const reactTags = useRef(null);
 
   const onDelete = (i) => {
     const newTags = tags.slice(0);
@@ -27,14 +27,27 @@ const Projects = () => {
     setTags(newTags);
   };
 
+  const onValidate = (tag) => {
+    if (tags.some((currentTag) => currentTag.name === tag.name)) {
+      reactTags.current.clearInput();
+      return false;
+    }
+    return true;
+  };
+
   const findTagAndSet = (input) => {
     const newTags = tagsWithId.filter((tag) => tag.name === input);
     setTags(newTags);
   };
 
-  useEffect(() => {
-    findTagAndSet('Featured');
-  }, []);
+  const findTagAndAdd = (input) => {
+    const newTag = tagsWithId.find((tag) => tag.name === input);
+    if (newTag) reactTags.current.addTag(newTag);
+  };
+
+  // useEffect(() => {
+  //   console.log(reactTags);
+  // }, []);
 
   const { allMarkdownRemark: { edges: projects } } = useStaticQuery(graphql`
     query MyQuery {
@@ -76,10 +89,10 @@ const Projects = () => {
           <h1 className={styles.heading}>Projects</h1>
           <div className={styles.nav}>
             <div className={styles.quickMenu}>
-              <span className={styles.active}>Featured</span>
-              <span>All</span>
-              <span>Work</span>
-              <span>Personal</span>
+              <span onClick={() => findTagAndSet('Featured')}>Featured</span>
+              <span onClick={() => setTags([])}>All</span>
+              <span onClick={() => findTagAndSet('Work')}>Work</span>
+              <span onClick={() => findTagAndSet('Personal')}>Personal</span>
             </div>
             <div className={styles.tagInput}>
               <FiFilter />
@@ -89,6 +102,7 @@ const Projects = () => {
                 suggestions={suggestions}
                 onDelete={onDelete}
                 onAddition={onAddition}
+                onValidate={onValidate}
                 placeholderText="Filter by Tags"
                 minQueryLength={1}
               />
@@ -102,7 +116,7 @@ const Projects = () => {
           >
             {filteredProjects.map((project) => (
               <li key={project.node.id} className={styles.card}>
-                <Card project={project.node} />
+                <Card project={project.node} findTagAndAdd={findTagAndAdd} />
               </li>
             ))}
           </FlipMove>

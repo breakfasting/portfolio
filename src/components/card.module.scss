@@ -25,6 +25,7 @@
   font-size: 1em;
 
   span {
+    cursor: pointer;
     color: white;
     display: inline-block;
     padding: 6px 8px;
@@ -34,14 +35,26 @@
   }
 
   .code {
-    background-color: $green;
+    background-color: $dark-green;
   }
 
   .science {
-    background-color: $blue;
+    background-color: $dark-blue;
   }
 
   .design {
+    background-color: $dark-orange;
+  }
+
+  .code:hover {
+    background-color: $green;
+  }
+
+  .science:hover {
+    background-color: $blue;
+  }
+
+  .design:hover {
     background-color: $orange;
   }
 
