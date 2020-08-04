@@ -17,6 +17,7 @@
   display: flex;
   justify-content: flex-start;
   flex-wrap: wrap;
+  gap: 2em;
 }
 
 
@@ -26,8 +27,6 @@
   border-radius: 4px;
   overflow: hidden;
   box-shadow: $grey 0 2px 2px;
-  margin-right: 0em;
-  margin-bottom: 2em;
   display: flex;
   flex-direction: column;
 }
@@ -50,10 +49,6 @@
   .card {
     width: calc(50% - 1em);
   }
-
-  .card:not(:nth-child(2n)) {
-    margin-right: 2em;
-  }
 }
 
 @media (min-width: 1200px) { 
@@ -63,14 +58,6 @@
 
   .card {
     width: calc(33.3% - 1.33em);
-  }
-
-  .card:not(:nth-child(2n)) {
-    margin-right: 0em;
-  }
-
-  .card:not(:nth-child(3n)) {
-    margin-right: 2em;
   }
 }
 
@@ -117,10 +104,6 @@
         border-bottom: 3px solid $terminal;
       }
     }
-
-
-
-
   }
 }
 
