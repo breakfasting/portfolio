@@ -1,5 +1,6 @@
 import React, { useState, useRef } from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
+import { FiFilter } from 'react-icons/fi';
 import ReactTags from 'react-tag-autocomplete';
 import { useGroupTags } from '../hooks/use-group-tags';
 import styles from './projects.module.scss';
@@ -77,6 +78,7 @@ const Projects = () => {
               <span>Personal</span>
             </div>
             <div className={styles.tagInput}>
+              <FiFilter />
               <ReactTags
                 ref={reactTags}
                 tags={tags}

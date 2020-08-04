@@ -19,8 +19,9 @@ time, mark, audio, video {
   margin: 0;
 	padding: 0;
 	border: 0;
-	font-size: 100%;
-	font-family: 'Open Sans';
+    font: inherit;
+    font-family: 'Open Sans', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 100%;
 	vertical-align: baseline;
 }
 
@@ -364,4 +365,3 @@ textarea {
     color: #000;
     padding: 0.2em 0;
 }
-

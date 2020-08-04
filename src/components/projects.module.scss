@@ -29,7 +29,21 @@
   flex-direction: column;
 }
 
+.tagInput {
+  max-width: 700px;
+  display: none;
+  align-items: center;
+
+  svg {
+    color: #888888;
+  }
+}
+
 @media (min-width: 768px) {
+  .tagInput {
+    display: flex;
+  }
+
   .card {
     width: calc(50% - 1em);
   }
@@ -63,15 +77,21 @@
 
   .heading {
     font-size: 2em;
-    color: $terminal;
-    font-weight: bold;
-    margin-bottom: 8px;
+    font-family: 'Ubuntu Mono', monospace;
+    background-color: $terminal;
+    color: white;
+    display: inline-block;
+    line-height: 1.4;
+    font-weight: 600;
+    // margin-bottom: 8px;
+    padding: 0 8px;
   }
 
   .nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    height: 45px;
 
     .quickMenu {
       display: flex;
@@ -95,9 +115,7 @@
       }
     }
 
-    .tagInput {
-      max-width: 700px;
-    }
+
 
 
   }
