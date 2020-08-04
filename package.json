@@ -21,7 +21,8 @@
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "react-helmet": "^6.1.0",
-    "react-stonecutter": "^0.3.10"
+    "react-stonecutter": "^0.3.10",
+    "react-tag-autocomplete": "^6.0.0"
   },
   "devDependencies": {
     "eslint": "^7.5.0",

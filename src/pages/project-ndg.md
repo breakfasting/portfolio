@@ -4,9 +4,9 @@ description: "Academic presentation session scheduling with file hosting"
 date: "2017-08-10"
 featuredImage: ../images/project-ndg.jpg
 tags:
-  - name: "work"
+  - name: "Work"
     type: "hide"
-  - name: "coding"
+  - name: "Coding"
     type: "hide"
   - name: "PHP"
     type: "code"

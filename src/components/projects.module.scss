@@ -70,24 +70,36 @@
 
   .nav {
     display: flex;
+    justify-content: space-between;
+    align-items: center;
 
-    span {
-      cursor: pointer;
-      margin-right: 16px;
-      color: grey;
-      font-size: 1.2em;
-      padding: 2px 0;
-      border-bottom: 3px solid transparent;
+    .quickMenu {
+      display: flex;
+
+      span {
+        cursor: pointer;
+        margin-right: 16px;
+        color: grey;
+        font-size: 1.2em;
+        padding: 2px 0;
+        border-bottom: 3px solid transparent;
+      }
+
+      span:hover {
+        border-bottom: 3px solid $grey;
+      }
+
+      span.active {
+        color: $terminal;
+        border-bottom: 3px solid $terminal;
+      }
     }
 
-    span:hover {
-      border-bottom: 3px solid $grey;
+    .tagInput {
+      max-width: 700px;
     }
 
-    span.active {
-      color: $terminal;
-      border-bottom: 3px solid $terminal;
-    }
+
   }
 }
 
