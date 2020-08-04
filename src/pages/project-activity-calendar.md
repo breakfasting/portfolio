@@ -4,6 +4,12 @@ description: "Managing upcoming events for NTU Global Lounge"
 date: "2017-08-10"
 featuredImage: ../images/project-ntuac.jpg
 tags:
+  - name: "featured"
+    type: "hide"
+  - name: "personal"
+    type: "hide"
+  - name: "coding"
+    type: "hide"
   - name: "UI/UX"
     type: "design"
   - name: "JavaScript"

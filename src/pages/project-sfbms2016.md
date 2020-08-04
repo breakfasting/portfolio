@@ -4,6 +4,12 @@ description: "Information and registration for an international academic confere
 date: "2016-10-1"
 featuredImage: ../images/project-sfbms2016.jpg
 tags:
+  - name: "work"
+    type: "hide"
+  - name: "coding"
+    type: "hide"
+  - name: "visual design"
+    type: "hide"
   - name: "Visual"
     type: "design"
   - name: "PHP"
