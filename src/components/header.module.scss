@@ -1,11 +1,14 @@
+@import './colors.scss';
+
 .header {
   display: flex;
   justify-content: center;
-  background-color: white;
+  background-color: $terminal;
 }
 
 .logo {
   margin-bottom: 0;
+  // box-shadow: 0px 0px 0px 3px $orange;
 }
 
 .contentWrap {
@@ -20,5 +23,19 @@
 @media (min-width: 1200px) { 
   .contentWrap {
     width: 1200px;
+  }
+}
+
+.resume {
+  color: $orange;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1em;
+  font-weight: 600;
+
+  svg {
+    font-size: 1.4em;
+    margin-right: 8px;
   }
 }

@@ -4,6 +4,7 @@
   display: flex;
   justify-content: center;
   padding: 32px 0;
+  padding-bottom: 64px;
   background-color: white;
 }
 
@@ -70,14 +71,14 @@
 
   .heading {
     font-size: 2em;
-    font-family: 'Ubuntu Mono', monospace;
-    background-color: $terminal;
-    color: white;
+    // font-family: 'Ubuntu Mono', monospace;
+    color: $terminal;
+    // color: white;
     display: inline-block;
     line-height: 1.4;
-    font-weight: 600;
+    font-weight: 700;
     // margin-bottom: 8px;
-    padding: 0 8px;
+    // padding: 0 8px;
   }
 
   .nav {

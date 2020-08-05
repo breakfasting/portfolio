@@ -62,10 +62,6 @@
   line-height: inherit;
 }
 
-.react-tags__selected-tag span{
-  font-family: 'Ubuntu Mono', monospace;
-}
-
 .react-tags__selected-tag:after {
   content: '\2715';
   color: #AAA;
@@ -129,7 +125,7 @@
 @media screen and (min-width: 30em) {
 
   .react-tags__suggestions {
-    width: 240px;
+    width: 160px;
   }
 
 }
