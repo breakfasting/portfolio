@@ -15,7 +15,7 @@ const Projects = () => {
   const [tags, setTags] = useState([{ name: 'Featured', id: 999 }]);
   const [height, setHeight] = useState(null);
   const [suggestions, setSuggestions] = useState(tagsWithId);
-  
+
   const reactTags = useRef(null);
   const flip = useRef(null);
 
