@@ -25,6 +25,10 @@ time, mark, audio, video {
 	vertical-align: baseline;
 }
 
+html {
+    background-color: #222222;
+}
+
 /* make sure to set some focus styles for accessibility */
 :focus {
     outline: 0;

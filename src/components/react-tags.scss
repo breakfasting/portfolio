@@ -55,10 +55,15 @@
   border: 0px solid #D1D1D1;
   border-radius: 4px;
   background: #F1F1F1;
+  
 
   /* match the font styles */
   font-size: inherit;
   line-height: inherit;
+}
+
+.react-tags__selected-tag span{
+  font-family: 'Ubuntu Mono', monospace;
 }
 
 .react-tags__selected-tag:after {

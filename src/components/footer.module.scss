@@ -1,11 +1,9 @@
-.header {
+@import './colors.scss';
+
+.footer {
   display: flex;
   justify-content: center;
-  background-color: white;
-}
-
-.logo {
-  margin-bottom: 0;
+  background-color: $terminal;
 }
 
 .contentWrap {
@@ -13,8 +11,9 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 13px 13px;
+  padding: 32px 0;
   box-sizing: border-box;
+  color: white;
 }
 
 @media (min-width: 1200px) { 

@@ -13,8 +13,11 @@ const Projects = () => {
   const tagsWithId = group.map((tag, index) => ({ ...tag, id: index }));
 
   const [tags, setTags] = useState([{ name: 'Featured', id: 999 }]);
+  const [height, setHeight] = useState(null);
   const [suggestions, setSuggestions] = useState(tagsWithId);
+  
   const reactTags = useRef(null);
+  const flip = useRef(null);
 
   const onDelete = (i) => {
     const newTags = tags.slice(0);
@@ -43,6 +46,10 @@ const Projects = () => {
   const findTagAndAdd = (input) => {
     const newTag = tagsWithId.find((tag) => tag.name === input);
     if (newTag) reactTags.current.addTag(newTag);
+  };
+
+  const resizeContainer = () => {
+    setHeight(flip.current.getBoundingClientRect().height);
   };
 
   // useEffect(() => {
@@ -109,18 +116,19 @@ const Projects = () => {
             </div>
           </div>
         </div>
-        <ul className={styles.list}>
-          <FlipMove
-            enterAnimation="fade"
-            leaveAnimation="fade"
-          >
-            {filteredProjects.map((project) => (
-              <li key={project.node.id} className={styles.card}>
-                <Card project={project.node} findTagAndAdd={findTagAndAdd} />
-              </li>
-            ))}
-          </FlipMove>
-        </ul>
+        <div className={styles.listContainer} style={{ height: `${height}px` }}>
+          <ul className={styles.list} ref={flip}>
+            <FlipMove
+              onStartAll={resizeContainer}
+            >
+              {filteredProjects.map((project) => (
+                <li key={project.node.id} className={styles.card}>
+                  <Card project={project.node} findTagAndAdd={findTagAndAdd} />
+                </li>
+              ))}
+            </FlipMove>
+          </ul>
+        </div>
       </div>
     </div>
   );

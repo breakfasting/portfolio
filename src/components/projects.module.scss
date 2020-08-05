@@ -3,6 +3,8 @@
 .projects {
   display: flex;
   justify-content: center;
+  padding: 32px 0;
+  background-color: white;
 }
 
 .contentWrap {
@@ -11,7 +13,9 @@
   box-sizing: border-box;
 }
 
-
+.listContainer {
+  transition: height 0.5s;
+}
 
 .list > div {
   display: flex;
@@ -63,7 +67,6 @@
 
 .topBar {
   padding: 32px 0;
-  margin-top: 32px;
 
   .heading {
     font-size: 2em;

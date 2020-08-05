@@ -22,16 +22,23 @@
 
 .tags {
   margin: 16px 0px -4px -4px;
-  font-size: 1em;
-
+  // font-size: 0.8em;
+  
   span {
+    // background-color: #F1F1F1;
     cursor: pointer;
+    font-family: 'Ubuntu Mono', monospace;
     color: white;
     display: inline-block;
     padding: 6px 8px;
     
     margin: 2px 3px;
     border-radius: 4px;
+    transition: all 0.3s;
+  }
+
+  span:hover {
+    background-color: #F1F1F1;
   }
 
   .code {
@@ -48,14 +55,17 @@
 
   .code:hover {
     background-color: $green;
+    color: white;
   }
 
   .science:hover {
     background-color: $blue;
+    color: white;
   }
 
   .design:hover {
     background-color: $orange;
+    color: white;
   }
 
   .hide {

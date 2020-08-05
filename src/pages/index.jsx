@@ -8,7 +8,7 @@ import Projects from '../components/projects';
 
 // import Layout from '../components/layout';
 // import Image from '../components/image';
-// import SEO from '../components/seo';
+import SEO from '../components/seo';
 
 // const IndexPage = () => (
 //   <Layout>
@@ -26,11 +26,9 @@ import Projects from '../components/projects';
 
 const IndexPage = () => (
   <Layout>
+    <SEO title="Home" />
     <Hero />
     <Projects />
-    <footer>
-      contact me
-    </footer>
   </Layout>
 );
 
