@@ -72,7 +72,7 @@ const Projects = () => {
               featuredImage {
                 childImageSharp {
                   fluid {
-                    ...GatsbyImageSharpFluid
+                    ...GatsbyImageSharpFluid_tracedSVG
                   }
                 }
               }

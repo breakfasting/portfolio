@@ -7,10 +7,20 @@ const Header = () => (
   <header className={styles.header}>
     <div className={styles.contentWrap}>
       <img src={logo} alt="" className={styles.logo} />
-      <span className={styles.resume}>
-        <FiArrowDownCircle />
-        Resume
-      </span>
+      <div className={styles.rightNav}>
+        <div className={styles.resume}>
+          <FiArrowDownCircle />
+          <span>
+            Resume
+          </span>
+        </div>
+        <span>
+          Projects
+        </span>
+        <span>
+          About
+        </span>
+      </div>
     </div>
   </header>
 );

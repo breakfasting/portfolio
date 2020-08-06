@@ -73,6 +73,13 @@
 
   .resume {
     color: $orange;
+    border-bottom: 3px solid transparent;
+    cursor: pointer;
+    transition: all 0.4s;
+  }
+
+  .resume:hover {
+    border-color: $orange;
   }
 }
 

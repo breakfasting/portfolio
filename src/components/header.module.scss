@@ -26,16 +26,43 @@
   }
 }
 
-.resume {
-  color: $orange;
+.rightNav {
   display: flex;
-  justify-content: center;
   align-items: center;
-  font-size: 1em;
-  font-weight: 600;
+  color: $grey;
+
+  span {
+    border-bottom: 2px solid transparent;
+    padding: 3px 0;
+    cursor: pointer;
+    transition: all 0.4s;
+  }
+
+  span:hover {
+    border-color: $grey;
+  }
+
+  .resume {
+    cursor: pointer;
+    color: $orange;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1em;
+    font-weight: 600;
+  }
+
+  .resume:hover span {
+    border-color: $dark-orange;
+  }
 
   svg {
     font-size: 1.4em;
     margin-right: 8px;
   }
+
+}
+
+.rightNav > * ~ * {
+  margin-left: 32px;
 }

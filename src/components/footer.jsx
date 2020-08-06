@@ -14,7 +14,7 @@ const Footer = () => (
         <h1>
           Check out my
           {' '}
-          <u className={styles.resume}>resume</u>
+          <span className={styles.resume}>resume</span>
           , Get in touch!
         </h1>
         <div className={styles.social}>
