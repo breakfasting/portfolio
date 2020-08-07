@@ -16,7 +16,7 @@ article, aside, canvas, details, embed,
 figure, figcaption, footer, header, hgroup,
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
-  margin: 0;
+    margin: 0;
 	padding: 0;
 	border: 0;
     font: inherit;
@@ -368,4 +368,10 @@ textarea {
     background: #ccc;
     color: #000;
     padding: 0.2em 0;
+}
+
+a {
+    display: flex;
+    text-decoration: none;
+    color: inherit;
 }

@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link } from 'gatsby';
 import '../components/reset.css';
-import styles from './index.module.scss';
 import Layout from '../components/layout';
 import Hero from '../components/hero';
 import Projects from '../components/projects';
@@ -26,7 +25,7 @@ import SEO from '../components/seo';
 
 const IndexPage = () => (
   <Layout>
-    <SEO title="Home" />
+    <SEO title="Portfolio" />
     <Hero />
     <Projects />
   </Layout>

@@ -1,0 +1,54 @@
+@import './colors.scss';
+
+.hero {
+  background-color: $light-grey;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+}
+
+.contentWrap {
+  max-width: 960px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 13px;
+  box-sizing: border-box;
+
+  .heroText {
+    line-height: 2em;
+  }
+  
+  h1 {
+    font-size: 1.6em;
+    padding: 2px 0;
+    background-color: $terminal;
+    color: white;
+    font-family: 'Ubuntu Mono', monospace;
+    font-weight: normal;
+    display: inline;
+  }
+
+  .heroText:nth-child(2) {
+    margin-left: 1.6em;
+  }
+}
+
+.code {
+  font-family: inherit;
+  color: $green;
+  display: inline-block;
+}
+
+.science {
+  font-family: inherit;
+  color: $blue;
+  display: inline-block;
+}
+
+.design {
+  font-family: inherit;
+  color: $orange;
+  display: inline-block;
+}

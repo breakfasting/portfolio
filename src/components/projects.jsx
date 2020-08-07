@@ -90,7 +90,7 @@ const Projects = () => {
   ));
 
   return (
-    <div className={styles.projects}>
+    <div id="projects" className={styles.projects}>
       <div className={styles.contentWrap}>
         <div className={styles.topBar}>
           <h1 className={styles.heading}>Projects</h1>
