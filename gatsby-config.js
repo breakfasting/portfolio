@@ -5,6 +5,7 @@ module.exports = {
     author: `waynesu`,
   },
   plugins: [
+    `gatsby-plugin-anchor-links`,
     `gatsby-plugin-sass`,
     {
       resolve: `gatsby-source-filesystem`,
