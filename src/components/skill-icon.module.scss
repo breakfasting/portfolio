@@ -1,0 +1,44 @@
+@import './colors.scss';
+
+.icon {
+  width: 80px;
+  position: relative;
+
+  .padding {
+    margin-top: 8px;
+  }
+
+  .tooltip {
+    opacity: 0;
+    white-space: nowrap;
+    background-color: $terminal;
+    color: white;
+    padding: 6px 8px;
+    border-radius: 4px;
+
+    position: absolute;
+    z-index: 1;
+    top: calc(100% - 8px);
+    left: 50%;
+    transform: translateX(-50%);
+    transition: all 0.3s;
+  }
+
+  .tooltip::after {
+    content: " ";
+    position: absolute;
+    bottom: 100%;  /* At the top of the tooltip */
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent $terminal transparent;
+  }
+}
+
+.icon:hover {
+  .tooltip {
+    top: calc(100%);
+    opacity: 1;
+  }
+}
