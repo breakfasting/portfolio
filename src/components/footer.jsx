@@ -20,21 +20,31 @@ const Footer = () => (
           , Get in touch!
         </h1>
         <div className={styles.social}>
-          <i className={styles.email}>
-            <FaEnvelope />
-          </i>
-          <i className={styles.linkedin}>
-            <FaLinkedinIn />
-          </i>
-          <i className={styles.github}>
-            <FaGithub />
-          </i>
-          <i className={styles.angellist}>
-            <FaAngellist />
-          </i>
-          <i className={styles.instagram}>
-            <FaInstagram />
-          </i>
+          <a href="mailto:waynesu.an@gmail.com">
+            <i className={styles.email}>
+              <FaEnvelope />
+            </i>
+          </a>
+          <a href="https://www.linkedin.com/in/waynesu-an/" target="_blank" rel="noreferrer">
+            <i className={styles.linkedin}>
+              <FaLinkedinIn />
+            </i>
+          </a>
+          <a href="https://github.com/breakfasting" target="_blank" rel="noreferrer">
+            <i className={styles.github}>
+              <FaGithub />
+            </i>
+          </a>
+          <a href="https://angel.co/u/wayne-su-1" target="_blank" rel="noreferrer">
+            <i className={styles.angellist}>
+              <FaAngellist />
+            </i>
+          </a>
+          <a href="https://www.instagram.com/_waynesu_/" target="_blank" rel="noreferrer">
+            <i className={styles.instagram}>
+              <FaInstagram />
+            </i>
+          </a>
         </div>
       </div>
       <div className={styles.copyright}>
