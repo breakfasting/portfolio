@@ -371,7 +371,7 @@ textarea {
 }
 
 a {
-    display: flex;
+    display: inline-block;
     text-decoration: none;
     color: inherit;
 }

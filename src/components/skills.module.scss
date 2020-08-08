@@ -1,0 +1,35 @@
+@import './colors.scss';
+
+.skills {
+  display: flex;
+  justify-content: center;
+  background-color: white;
+}
+
+.contentWrap {
+  width: 960px;
+  padding: 64px 13px;
+  box-sizing: border-box;
+}
+
+@media (min-width: 1200px) { 
+  .contentWrap {
+    width: 1200px;
+  }
+}
+
+.heading {
+  
+  h1 {
+    font-size: 2em;
+    color: $terminal;
+    line-height: 1.4em;
+    font-weight: 700;
+  }
+
+  h2 {
+    color: grey;
+    font-size: 1.2em;
+    margin-top: 8px;
+  }
+}

@@ -34,13 +34,17 @@
   span {
     line-height: 1em;
     border-bottom: 2px solid transparent;
-    padding: 3px 0;
+
     cursor: pointer;
     transition: all 0.3s;
   }
 
   span:hover {
     border-color: $grey;
+  }
+
+  .resumeText {
+    padding: 3px 0;
   }
 
   .resume {
@@ -53,7 +57,7 @@
     font-weight: 600;
   }
 
-  .resume:hover span {
+  .resume:hover .resumeText {
     border-color: $dark-orange;
   }
 

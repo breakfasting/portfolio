@@ -11,12 +11,14 @@ const Header = () => (
         <img src={logo} alt="" className={styles.logo} />
       </AnchorLink>
       <div className={styles.rightNav}>
-        <div className={styles.resume}>
-          <FiArrowDownCircle />
-          <span>
-            Resume
-          </span>
-        </div>
+        <a href="https://drive.google.com/file/d/1wY7SMfveYZZF8M1-EvzypV1CUOpAC4ac/view?usp=sharing" target="_blank" rel="noreferrer">
+          <div className={styles.resume}>
+            <FiArrowDownCircle />
+            <span className={styles.resumeText}>
+              Resume
+            </span>
+          </div>
+        </a>
         <AnchorLink to="/#projects" title="My Projects" stripHash>
           <span>
             Projects

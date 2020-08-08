@@ -11,10 +11,12 @@ const Footer = () => (
         <div className={styles.location}>
           Based in San Francisco, CA
         </div>
-        <h1>
+        <h1 className={styles.checkout}>
           Check out my
           {' '}
-          <span className={styles.resume}>resume</span>
+          <a href="https://drive.google.com/file/d/1wY7SMfveYZZF8M1-EvzypV1CUOpAC4ac/view?usp=sharing" target="_blank" rel="noreferrer">
+            <span className={styles.resume}>resume</span>
+          </a>
           , Get in touch!
         </h1>
         <div className={styles.social}>

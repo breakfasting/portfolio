@@ -1,54 +1,55 @@
 @import './colors.scss';
 
-.hero {
+.aboutHero {
   background-color: $light-grey;
-  height: 400px;
   display: flex;
   justify-content: center;
 }
 
 .contentWrap {
-  max-width: 960px;
+  max-width: 1200px;
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  padding: 13px;
+  padding: 64px 13px;
   box-sizing: border-box;
+}
 
-  .heroText {
-    line-height: 2em;
-  }
-  
+.portrait {
+  min-width: 256px;
+  margin-top: 50px;
+  margin-right: 32px;
+  border-radius: 4px;
+  overflow: hidden;
+  border: 1px solid $grey;
+}
+
+.intro {
+  line-height: 1.8em;
+  color: $terminal;
+
   h1 {
-    font-size: 1.6em;
-    padding: 2px 0;
-    background-color: $terminal;
-    color: white;
-    font-family: 'Ubuntu Mono', monospace;
-    font-weight: normal;
-    display: inline;
+    font-size: 2em;
+    font-weight: 700;
+    // font-family: 'Ubuntu Mono', monospace;
   }
 
-  .heroText:nth-child(2) {
-    margin-left: 1.6em;
+  p {
+    margin-top: 16px;
   }
 }
 
-.code {
-  font-family: inherit;
-  color: $green;
-  display: inline-block;
-}
+@media (max-width: 768px) {
+  .contentWrap {
+    flex-wrap: wrap;
+  }
 
-.science {
-  font-family: inherit;
-  color: $blue;
-  display: inline-block;
-}
+  .intro {
+    padding: 32px;
+  }
 
-.design {
-  font-family: inherit;
-  color: $orange;
-  display: inline-block;
+  .portrait {
+    width: 100%;
+    margin: 32px;
+  }
 }
