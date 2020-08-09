@@ -5,6 +5,16 @@ module.exports = {
     author: `waynesu`,
   },
   plugins: [
+    {
+      resolve: `gatsby-plugin-modal-routing`,
+      options: {
+        appElement: '#___gatsby',
+        modalProps: {
+          className: 'react-modal',
+          overlayClassName: 'react-modal-overlay',
+        },
+      },
+    },
     `gatsby-plugin-anchor-links`,
     `gatsby-plugin-sass`,
     {

@@ -1,0 +1,25 @@
+@import '../components/colors.scss';
+
+.react-modal {
+  background-color: white;
+  margin: 30px;
+}
+
+.react-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.75);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow-y: hidden;
+}
+
+.ReactModal__Body--open {
+  #___gatsby {
+    filter: blur(4px);
+  }
+}

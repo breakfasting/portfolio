@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { useStaticQuery, graphql } from 'gatsby';
+import { useStaticQuery, graphql, Link } from 'gatsby';
 import FlipMove from 'react-flip-move';
 import { FiFilter } from 'react-icons/fi';
 import ReactTags from 'react-tag-autocomplete';
@@ -94,6 +94,14 @@ const Projects = () => {
       <div className={styles.contentWrap}>
         <div className={styles.topBar}>
           <h1 className={styles.heading}>Projects</h1>
+          <Link
+            to="/project-ndg/"
+            state={{
+              modal: true,
+            }}
+          >
+            Login
+          </Link>
           <div className={styles.nav}>
             <div className={styles.quickMenu}>
               <span onClick={() => findTagAndSet('Featured')}>Featured</span>

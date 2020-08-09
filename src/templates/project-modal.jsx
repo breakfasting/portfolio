@@ -1,22 +1,46 @@
 import React from 'react';
-import { graphql } from 'gatsby'; // highlight-line
+import { ModalRoutingContext } from 'gatsby-plugin-modal-routing';
+import { graphql, Link } from 'gatsby'; // highlight-line
 import Layout from '../components/layout';
 
-// highlight-start
-export default function BlogPost({ data }) {
-  const post = data.markdownRemark;
-  // highlight-end
-  return (
-    <Layout>
-      {/* highlight-start */}
+// export default function BlogPost({ data }) {
+//   const post = data.markdownRemark;
+//   // highlight-end
+//   return (
+//     <Layout>
+//       {/* highlight-start */}
+//       <div>
+//         <h1>{post.frontmatter.title}</h1>
+//         <div dangerouslySetInnerHTML={{ __html: post.html }} />
+//       </div>
+//       {/* highlight-end */}
+//     </Layout>
+//   );
+// }
+
+const ModalExamplePage = () => (
+  <ModalRoutingContext.Consumer>
+    {({ modal, closeTo }) => (
       <div>
-        <h1>{post.frontmatter.title}</h1>
-        <div dangerouslySetInnerHTML={{ __html: post.html }} />
+        {modal ? (
+          <Link to={closeTo}>
+            Close
+          </Link>
+        ) : (
+          <header>
+            <h1>
+              Website Title
+            </h1>
+          </header>
+        )}
+
+        <h2>Modal Page</h2>
+
+        <Link to="/">Go back to the homepage</Link>
       </div>
-      {/* highlight-end */}
-    </Layout>
-  );
-}
+    )}
+  </ModalRoutingContext.Consumer>
+);
 
 export const query = graphql`
   query($slug: String!) {
@@ -28,3 +52,5 @@ export const query = graphql`
     }
   }
 `;
+
+export default ModalExamplePage;
