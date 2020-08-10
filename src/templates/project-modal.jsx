@@ -47,14 +47,22 @@ const ModalExamplePage = ({ data }) => {
               </div>
             </div>
             <div className={styles.links}>
-              <span>
-                <FaGlobeAmericas />
-                Live Site
-              </span>
-              <span>
-                <FaGithub />
-                GitHub
-              </span>
+              {post.frontmatter.live && (
+                <a href={post.frontmatter.live} target="_blank" rel="noreferrer">
+                  <span>
+                    <FaGlobeAmericas />
+                    Live Site
+                  </span>
+                </a>
+              )}
+              {post.frontmatter.repo && (
+                <a href={post.frontmatter.repo} target="_blank" rel="noreferrer">
+                  <span>
+                    <FaGithub />
+                    GitHub
+                  </span>
+                </a>
+              )}
             </div>
             <Img fluid={post.frontmatter.featuredImage.childImageSharp.fluid} />
           </div>
@@ -71,6 +79,8 @@ export const query = graphql`
       id
       frontmatter {
         date
+        live
+        repo
         description
         title
         tags {
@@ -79,7 +89,7 @@ export const query = graphql`
         }
         featuredImage {
           childImageSharp {
-            fluid(maxWidth: 700) {
+            fluid(maxWidth: 980) {
               ...GatsbyImageSharpFluid_tracedSVG
             }
           }

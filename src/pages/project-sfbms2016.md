@@ -2,6 +2,8 @@
 title: "SFBMS 2016"
 description: "Information and registration for an international academic conference"
 date: "2016-10-1"
+live: "http://sfbms2016.biol.ntnu.edu.tw/"
+repo: "https://github.com/breakfasting/SFBMS-2016"
 featuredImage: ../images/project-sfbms2016.jpg
 tags:
   - name: "Work"

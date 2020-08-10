@@ -11,8 +11,9 @@
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
-  padding: 64px 0;
+  padding: 64px 13px;
   box-sizing: border-box;
+  flex-wrap: wrap;
   color: $grey;
 }
 
@@ -84,5 +85,6 @@
 }
 
 .copyright {
+  margin-top: 32px;
   color: $dark-grey;
 }

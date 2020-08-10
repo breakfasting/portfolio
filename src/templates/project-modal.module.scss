@@ -13,12 +13,14 @@
 .header {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  // align-items: center;
   padding: 0px 32px;
   margin-top: 32px;
 }
 
 .info {
+  padding-right: 8px;
+
   h1 {
     font-size: 1.6em;
     font-weight: 600;
@@ -28,6 +30,7 @@
   span {
     // margin-top: 16px;
     color: $greyer;
+    line-height: 1.2em;
   }
 }
 
@@ -49,15 +52,23 @@
   span {
     cursor: pointer;
     color: $terminal;
-    background-color: $orange;
+    background-color: $dark-orange;
+    // box-sizing: border-box;
     padding: 6px 8px;
+    border: 2px solid $dark-orange;
     display: flex;
     align-items: center;
     gap: 4px;
     border-radius: 4px;
+    transition: all 0.3s
   }
 
-  span ~ span {
-    margin-left: 8px;
+  span:hover {
+    background-color: $terminal;
+    color: $dark-orange;
   }
+}
+
+.links > * ~ * {
+  margin-left: 8px;
 }

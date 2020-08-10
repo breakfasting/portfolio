@@ -12,6 +12,7 @@ module.exports = {
         modalProps: {
           className: 'react-modal',
           overlayClassName: 'react-modal-overlay',
+          closeTimeoutMS: 400,
         },
       },
     },
