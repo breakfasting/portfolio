@@ -78,6 +78,9 @@ const Projects = () => {
               }
             }
             id
+            fields {
+              slug
+            }
           }
         }
       }
@@ -94,14 +97,7 @@ const Projects = () => {
       <div className={styles.contentWrap}>
         <div className={styles.topBar}>
           <h1 className={styles.heading}>Projects</h1>
-          <Link
-            to="/project-ndg/"
-            state={{
-              modal: true,
-            }}
-          >
-            Login
-          </Link>
+
           <div className={styles.nav}>
             <div className={styles.quickMenu}>
               <span onClick={() => findTagAndSet('Featured')}>Featured</span>

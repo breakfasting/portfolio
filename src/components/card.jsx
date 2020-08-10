@@ -1,21 +1,39 @@
 import React from 'react';
+import { Link } from 'gatsby';
 import Img from 'gatsby-image';
 import styles from './card.module.scss';
 
 const Card = ({
   findTagAndAdd,
   project: {
+    fields: {
+      slug,
+    },
     frontmatter: {
       featuredImage, title, description, tags, date,
     },
   },
 }) => (
   <>
-    <Img fluid={featuredImage.childImageSharp.fluid} />
+    <Link
+      to={slug}
+      state={{
+        modal: true,
+      }}
+    >
+      <Img fluid={featuredImage.childImageSharp.fluid} />
+    </Link>
     <div className={styles.info}>
       <div>
         <div className={styles.cardTitle}>
-          <h1>{title}</h1>
+          <Link
+            to={slug}
+            state={{
+              modal: true,
+            }}
+          >
+            <h1>{title}</h1>
+          </Link>
         </div>
         <div className={styles.cardDesc}>
           {description}

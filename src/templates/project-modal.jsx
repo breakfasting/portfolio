@@ -2,6 +2,9 @@ import React from 'react';
 import { ModalRoutingContext } from 'gatsby-plugin-modal-routing';
 import { graphql, Link } from 'gatsby';
 import { FiX } from 'react-icons/fi';
+import {
+  FaGithub, FaGlobeAmericas,
+} from 'react-icons/fa';
 import Img from 'gatsby-image';
 import styles from './project-modal.module.scss';
 import Layout from '../components/layout';
@@ -43,9 +46,17 @@ const ModalExamplePage = ({ data }) => {
                 </Link>
               </div>
             </div>
-
+            <div className={styles.links}>
+              <span>
+                <FaGlobeAmericas />
+                Live Site
+              </span>
+              <span>
+                <FaGithub />
+                GitHub
+              </span>
+            </div>
             <Img fluid={post.frontmatter.featuredImage.childImageSharp.fluid} />
-            <Link to="/">Go back to the homepage</Link>
           </div>
         </ConditionalLayout>
       )}
