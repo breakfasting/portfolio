@@ -2,7 +2,7 @@
 
 .react-modal {
   // background-color: white;
-  margin: 30px;
+  margin: 15px;
   // box-shadow: rgba(255, 255, 255, 0.06) 0px 2px 10px 4px;
 }
 
@@ -16,7 +16,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  overflow-y: hidden;
+  // overflow-y: auto;
 }
 
 .ReactModal__Body--open {
@@ -36,4 +36,11 @@
 
 .ReactModal__Overlay--before-close{
   opacity: 0;
+}
+
+@media (max-width: 660px) {
+  .ReactModal__Body--open,
+  .ReactModal__Html--open {
+    overflow: hidden;
+  }
 }

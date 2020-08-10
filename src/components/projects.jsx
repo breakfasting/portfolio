@@ -38,6 +38,10 @@ const Projects = () => {
     return true;
   };
 
+  const onBlur = () => {
+    reactTags.current.clearInput();
+  };
+
   const findTagAndSet = (input) => {
     const newTags = tagsWithId.filter((tag) => tag.name === input);
     setTags(newTags);
@@ -52,9 +56,16 @@ const Projects = () => {
     setHeight(flip.current.getBoundingClientRect().height);
   };
 
-  // useEffect(() => {
-  //   console.log(reactTags);
-  // }, []);
+  useEffect(() => {
+    const handleResize = () => {
+      setHeight(flip.current.getBoundingClientRect().height);
+    };
+
+    window.addEventListener('resize', handleResize);
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
 
   const { allMarkdownRemark: { edges: projects } } = useStaticQuery(graphql`
     query MyQuery {
@@ -116,6 +127,7 @@ const Projects = () => {
                 onValidate={onValidate}
                 placeholderText="Filter by Tags"
                 minQueryLength={1}
+                onBlur={onBlur}
               />
             </div>
           </div>

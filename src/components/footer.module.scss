@@ -70,6 +70,11 @@
     font-size: 1.6em;
     font-weight: 600;
     color: white;
+    line-height: 1.4em;
+
+    span {
+      display: inline-block;
+    }
   }
 
   .resume {
@@ -87,4 +92,8 @@
 .copyright {
   margin-top: 32px;
   color: $dark-grey;
+
+  span {
+    display: inline-block;
+  }
 }

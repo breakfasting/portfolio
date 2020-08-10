@@ -17,7 +17,10 @@ const Footer = () => (
           <a href="https://drive.google.com/file/d/1wY7SMfveYZZF8M1-EvzypV1CUOpAC4ac/view?usp=sharing" target="_blank" rel="noreferrer">
             <span className={styles.resume}>resume</span>
           </a>
-          , Get in touch!
+          {', '}
+          <span>
+            Get in touch!
+          </span>
         </h1>
         <div className={styles.social}>
           <a href="mailto:waynesu.an@gmail.com">
@@ -51,7 +54,8 @@ const Footer = () => (
         ©
         {' '}
         {new Date().getFullYear()}
-        , Designed and coded by Wayne Su
+        {', '}
+        <span>Designed and coded by Wayne Su</span>
       </div>
 
     </div>

@@ -379,3 +379,10 @@ a {
 a, a:active, a:focus {
    outline: none;
 }
+
+::selection {
+  background: #ffab0e; /* WebKit/Blink Browsers */
+}
+::-moz-selection {
+  background: #ffab0e; /* Gecko Browsers */
+}
