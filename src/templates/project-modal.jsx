@@ -64,7 +64,13 @@ const ModalExamplePage = ({ data }) => {
                 </a>
               )}
             </div>
-            <Img fluid={post.frontmatter.featuredImage.childImageSharp.fluid} />
+            {post.frontmatter.live ? (
+              <a href={post.frontmatter.live} target="_blank" rel="noreferrer">
+                <Img fluid={post.frontmatter.featuredImage.childImageSharp.fluid} />
+              </a>
+            ) : (
+              <Img fluid={post.frontmatter.featuredImage.childImageSharp.fluid} />
+            )}
           </div>
         </ConditionalLayout>
       )}

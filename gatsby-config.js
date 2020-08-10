@@ -53,12 +53,12 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
+        name: `Wayne Su Portfolio`,
+        short_name: `WayneSu`,
         start_url: `/`,
-        background_color: `#663399`,
-        theme_color: `#663399`,
-        display: `minimal-ui`,
+        background_color: `#222222`,
+        theme_color: `#F8F8F8`,
+        display: `standalone`,
         icon: `src/images/logo-small.png`, // This path is relative to the root of the site.
       },
     },
