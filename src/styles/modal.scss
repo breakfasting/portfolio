@@ -1,8 +1,9 @@
 @import '../components/colors.scss';
 
 .react-modal {
-  background-color: white;
+  // background-color: white;
   margin: 30px;
+  box-shadow: rgba(255, 255, 255, 0.06) 0px 2px 10px 4px;
 }
 
 .react-modal-overlay {
@@ -11,7 +12,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(0, 0, 0, 0.75);
+  background-color: rgba(0, 0, 0, 0.8);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -20,6 +21,6 @@
 
 .ReactModal__Body--open {
   #___gatsby {
-    filter: blur(4px);
+    filter: blur(2px);
   }
 }
