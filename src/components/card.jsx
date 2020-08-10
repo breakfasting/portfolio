@@ -21,7 +21,11 @@ const Card = ({
         modal: true,
       }}
     >
-      <Img fluid={featuredImage.childImageSharp.fluid} />
+      <div className={styles.imageContainer}>
+        <div className={styles.image}>
+          <Img fluid={featuredImage.childImageSharp.fluid} />
+        </div>
+      </div>
     </Link>
     <div className={styles.info}>
       <div>

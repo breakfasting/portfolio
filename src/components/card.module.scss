@@ -72,3 +72,16 @@
     display: none;
   }
 }
+
+.imageContainer {
+  overflow: hidden;
+}
+
+.image {
+  transition: all 0.5s ease-in-out;
+}
+
+.image:hover {
+  transform: scale(1.06);
+  transform-origin: 50% 50%;
+}

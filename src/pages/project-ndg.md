@@ -4,7 +4,7 @@ description: "Academic presentation session scheduling with file hosting"
 date: "2017-08-10"
 live: 
 repo: "https://github.com/breakfasting/NDGroup"
-featuredImage: ../images/project-ndg.jpg
+featuredImage: ../images/project-ndg.png
 tags:
   - name: "Work"
     type: "hide"
