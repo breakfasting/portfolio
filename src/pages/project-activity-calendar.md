@@ -4,7 +4,7 @@ description: "Managing upcoming events for NTU Global Lounge"
 date: "2017-08-10"
 live: "https://github.waynesu.com/NTUGL_cal/index.html"
 repo: "https://github.com/breakfasting/NTUGL_cal"
-featuredImage: ../images/project-ntuac.jpg
+featuredImage: ../images/project-ntuac.png
 tags:
   - name: "Featured"
     type: "hide"

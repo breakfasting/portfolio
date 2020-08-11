@@ -3,7 +3,7 @@
 .container {
   background-color: $terminal;
   color: white;
-  width: 600px;
+  width: 800px;
   display: flex;
   flex-direction: column;
   border-radius: 4px;
@@ -73,7 +73,7 @@
   margin-left: 8px;
 }
 
-@media (max-width: 660px) {
+@media (max-width: 800px) {
   .container {
     width: 100%;
   }

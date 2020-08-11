@@ -4,7 +4,7 @@ description: "Website & Logo redesign for the newly formed academic association"
 date: "2017-10-01"
 live: "http://snerdt.waynesu.com/"
 repo: "https://github.com/breakfasting/snerdt_wordpress"
-featuredImage: ../images/project-snerd.jpg
+featuredImage: ../images/project-snerd.png
 tags:
   - name: "Featured"
     type: "hide"
