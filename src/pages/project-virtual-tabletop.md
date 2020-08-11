@@ -1,6 +1,6 @@
 ---
 title: "Virtual Tabletop"
-description: "An tabletop gaming environment to play with your friends online"
+description: "A tabletop gaming environment to play with your friends online"
 date: "2020-05-22"
 live: "https://virtualtabletop.herokuapp.com/"
 repo: "https://github.com/drice89/virtual_tabletop"
