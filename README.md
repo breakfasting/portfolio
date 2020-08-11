@@ -16,11 +16,9 @@ A JAM Stack portfolio built with GatsbyJS, React Hooks and GraphQL.
 ### FLIP animated layouts
 Handling the animation for elements that persist on the screen through layout changes, The [Flip technique](https://aerotwist.com/blog/flip-your-animations/#the-general-approach) is a principle that stands for First, Last, Invert, Play. Which seamlessly transitions layout elements between their first and last state. Resulting in smooth animations.
 
-![Screenshot](https://i.imgur.com/nWRQbMn.gifv)
+![Screenshot](https://i.imgur.com/nWRQbMn.gif)
 
 ### Higher-Order Components
-Utilizing Higher-Order Components (HOCs) to conditionally render the Layout component for DRY code. Which can then be reused throughout the project
-
 ```JSX
 const ConditionalLayout = ({ condition, children }) => (
   condition ? <Layout>{children}</Layout> : children
@@ -41,5 +39,7 @@ const ModalExamplePage = ({ data }) => {
   );
 };
 ```
+
+Utilizing Higher-Order Components (HOCs) to conditionally render the Layout component for DRY code. Which can then be reused throughout the project.
 
 ![Layout](https://i.imgur.com/8pzQ1KX.png)
