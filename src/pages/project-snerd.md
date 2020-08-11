@@ -22,6 +22,10 @@ tags:
     type: "code"
   - name: "PHP"
     type: "code"
+  - name: "MySQL"
+    type: "code"
+  - name: "WordPress"
+    type: "code"
   - name: "CMS"
     type: "code"
 ---

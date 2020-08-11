@@ -69,7 +69,7 @@ const Projects = () => {
 
   const { allMarkdownRemark: { edges: projects } } = useStaticQuery(graphql`
     query MyQuery {
-      allMarkdownRemark {
+      allMarkdownRemark(sort: {fields: frontmatter___date, order: DESC}) {
         edges {
           node {
             frontmatter {
