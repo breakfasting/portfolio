@@ -4,7 +4,7 @@
 
 A JAM Stack portfolio built with GatsbyJS, React Hooks and GraphQL.
 
-![Screenshot](https://i.imgur.com/ZkhovLW.png)
+![Screenshot](https://i.imgur.com/v9AU7mG.png)
 
 ## Technologies
 * Frontend: GatsbyJS/React/GraphQL
