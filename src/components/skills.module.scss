@@ -35,9 +35,20 @@
 }
 
 .icons {
-  padding: 32px 13px;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 2em;
-  justify-content: center;
+  padding: 32px 0px;
+  // display: flex;
+  // flex-wrap: wrap;
+  // gap: 2em;
+  // margin-right: 2em;
+  // justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 100px); 
+  grid-gap: 1rem;
+  justify-content: space-evenly;
 }
+
+
+// .icons::after {
+//   content: "";
+//   flex: auto;
+// }

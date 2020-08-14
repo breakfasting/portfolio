@@ -2,6 +2,7 @@ import React from 'react';
 import {
   FaGithub, FaLinkedinIn, FaAngellist, FaInstagram, FaEnvelope,
 } from 'react-icons/fa';
+import { AnchorLink } from 'gatsby-plugin-anchor-links';
 import styles from './footer.module.scss';
 
 const Footer = () => (
@@ -43,11 +44,11 @@ const Footer = () => (
               <FaAngellist />
             </i>
           </a>
-          <a href="https://www.instagram.com/_waynesu_/" target="_blank" rel="noreferrer">
+          {/* <a href="https://www.instagram.com/_waynesu_/" target="_blank" rel="noreferrer">
             <i className={styles.instagram}>
               <FaInstagram />
             </i>
-          </a>
+          </a> */}
         </div>
       </div>
       <div className={styles.copyright}>
@@ -55,7 +56,13 @@ const Footer = () => (
         {' '}
         {new Date().getFullYear()}
         {', '}
-        <span>Designed and coded by Wayne Su</span>
+        <span>
+          Designed and coded by
+          {' '}
+          <AnchorLink to="/about" title="About me">
+            Wayne Su
+          </AnchorLink>
+        </span>
       </div>
 
     </div>

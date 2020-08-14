@@ -18,13 +18,23 @@
 
   .heroText {
     line-height: 2em;
+
+    .name {
+      font-family: 'Ubuntu Mono', monospace;
+      transition: all 0.4s;
+    }
+    
+    .name:hover {
+      color: white;
+      text-decoration: underline;
+    }
   }
   
   h1 {
     font-size: 1.6em;
     padding: 2px 0;
     background-color: $terminal;
-    color: white;
+    color: $grey;
     font-family: 'Ubuntu Mono', monospace;
     font-weight: normal;
     display: inline;
@@ -32,6 +42,10 @@
 
   .heroText:nth-child(2) {
     margin-left: 1.6em;
+  }
+
+  a {
+    align-self: flex-end;
   }
 }
 
@@ -51,4 +65,26 @@
   font-family: inherit;
   color: $orange;
   display: inline-block;
+}
+
+.about {
+  // background-color: $dark-orange;
+  margin-top: 32px;
+  padding: 2px;
+  display: flex;
+  align-items: center;
+  font-size: 1.6em;
+  color: $terminal;
+  cursor: pointer;
+
+  span {
+    font-family: 'Ubuntu Mono', monospace;
+    font-size: 1.4rem;
+    margin-right: 8px;
+    padding-bottom: 2px;
+  }
+}
+
+.about:hover {
+  text-decoration: underline;
 }

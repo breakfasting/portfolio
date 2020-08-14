@@ -95,5 +95,13 @@
 
   span {
     display: inline-block;
+
+    a {
+      transition: all 0.4s;
+    }
+
+    a:hover {
+      color: $greyer;
+    }
   }
 }
