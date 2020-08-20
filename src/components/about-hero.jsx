@@ -17,7 +17,7 @@ const AboutHero = () => (
         <p>
           I started my engineering journey in high school while working as an independent contract web developer for friends, school administrations, and academic related associations.
           And it was not long until data scraping with R, learning graph traversing algorithms, and building a travel recommender app for my master thesis has won my heart over to programming.
-          Which after taking a project managing internship at a GIS software provider company, the exposure to the work culture as well as working closely in a team with engineers solidified my goal to become a software engineer.
+          Which after taking a product management internship at a GIS software provider company, the exposure to the work culture as well as working closely in a team with engineers solidified my goal to become a software engineer.
         </p>
         <p>
           The industry has many different perspectives to offer and it continues to inspire me to push my boundaries as a programmer, designer, and problem solver.
