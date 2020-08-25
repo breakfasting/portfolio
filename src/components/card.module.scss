@@ -1,11 +1,15 @@
 @import './colors.scss';
 
 .info {
-  padding: 32px;
+  padding-top: 32px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   flex: 1;
+}
+
+.descInfo {
+  padding: 0 32px;
 }
 
 .cardTitle {
@@ -20,8 +24,32 @@
   color: $dark-grey;
 }
 
+.tagsInfo {
+  margin-top: 8px;
+  transition: all 0.4s;
+  padding: 16px 32px 28px 28px;
+  background: linear-gradient(to bottom, transparent 50%, $light-grey 50%);
+  background-size: 100% 200%;
+  background-position: left top;
+
+  .tagsTip {
+    font-size: 0.8em;
+    margin-bottom: 6px;
+    margin-left: 4px;
+    color: transparent;
+    transition: all 0.4s;
+  }
+}
+
+.tagsInfo:hover {
+  background-position: left bottom;
+
+  .tagsTip {
+    color: $greyer;
+  }
+}
+
 .tags {
-  margin: 16px 0px -4px -4px;
   font-size: 0.8em;
   
   span {
@@ -30,11 +58,13 @@
     // font-family: 'Ubuntu Mono', monospace;
     color: white;
     display: inline-block;
-    padding: 6px 8px;
+    padding: 4px 6px;
     
     margin: 2px 3px;
     border-radius: 4px;
     transition: all 0.3s;
+    border: 2px solid transparent;
+    box-sizing: border-box;
   }
 
   span:hover {
@@ -54,18 +84,21 @@
   }
 
   .code:hover {
-    background-color: $green;
-    color: white;
+    color: $dark-green;
+    background-color: white;
+    border-color: $dark-green;
   }
 
   .science:hover {
-    background-color: $blue;
-    color: white;
+    color: $dark-blue;
+    background-color: white;
+    border-color: $dark-blue;
   }
 
   .design:hover {
-    background-color: $orange;
-    color: white;
+    color: $dark-orange;
+    background-color: white;
+    border-color: $dark-orange;
   }
 
   .hide {

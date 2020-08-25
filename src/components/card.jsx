@@ -28,7 +28,7 @@ const Card = ({
       </div>
     </Link>
     <div className={styles.info}>
-      <div>
+      <div className={styles.descInfo}>
         <div className={styles.cardTitle}>
           <Link
             to={slug}
@@ -43,12 +43,17 @@ const Card = ({
           {description}
         </div>
       </div>
-      <div className={styles.tags}>
-        {tags.map((tag) => (
-          <span key={`${title}-${tag.name}`} className={styles[tag.type]} onClick={() => findTagAndAdd(tag.name)}>
-            {tag.name}
-          </span>
-        ))}
+      <div className={styles.tagsInfo}>
+        <div className={styles.tagsTip}>
+          Click to filter by tags
+        </div>
+        <div className={styles.tags}>
+          {tags.map((tag) => (
+            <span key={`${title}-${tag.name}`} className={styles[tag.type]} onClick={() => findTagAndAdd(tag.name)}>
+              {tag.name}
+            </span>
+          ))}
+        </div>
       </div>
     </div>
   </>
