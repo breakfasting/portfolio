@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `Wayne Su`,
-    description: `A GIS researcher-turned-software engineer with a big affinity for innovative concepts amongst their real-world applications`,
+    description: `A GIS researcher-turned-software engineer who's all about coding, data science & visual design!`,
     author: `waynesu`,
   },
   plugins: [
